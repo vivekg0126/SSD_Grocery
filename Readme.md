@@ -222,5 +222,4 @@ We have used following hyper parameters for training the model
 
 We have obtained current mAP of 0.45. We have emperically found the different scaling factors for different feature maps.
 We are of the view that the results can be improved by considering one more feature map from the base VGG between 'conv5_3' and 'FC7'.
-This will provide some bounding boxes between (38x38) and (19x19), helping us in dealing with the scaling problem. With the limitation
-of time we couldn't perform this experimentation.
+This will provide some bounding boxes between (38x38) and (19x19), helping us in dealing with the scaling problem.
