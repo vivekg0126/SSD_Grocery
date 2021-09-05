@@ -65,12 +65,12 @@ Extract the project and run train.py for training the dataset and eval.py to eva
 * model_save : to save the model for checkpoint
 
 
-``` python train.py -<arguement> <arguement value>```
+``` python train.py -<argument> <argument value>```
 
 #### Argument to eval.py
 
 
-``` python eval.py -<arguement> <arguement value>```
+``` python eval.py -<argument> <argument value>```
 
 For Example:
 ```
@@ -152,7 +152,7 @@ Instead of using FC6 and FC7, we have used atrous convolutions in VGG base.
 For this dataset the feature map dimension of (3x3) and (1x1) is less likely to discover any relavant underlying objects, since most of the
 objects in the dataset are small. So we have omitted the output conv10_2 and conv11_2 layers in the dataset.
  
- ### Network Implementation (Model.py)
+ ### Network Implementation (model.py)
 
  The 'SSD' class module encapsulates 4 submodules and carries forward pass for whole of single shot detector.
 
@@ -199,9 +199,9 @@ For finding correct value for different scale we did empircal analysis with mult
 We calculated mean IOU for all the ground truth bounding boxes with prior boxes generated via different scaling and aspect ratio values.
 We observed that for lower scale values slightly lower aspect ratios generated better IOUs with ground truth boxes.
 
-## Hyperparameter Tuning
+## Hyper-parameter Tuning
 
-We have used following hyper parameters for training the model
+We have used following hyper-parameters for training the model
 
 * batch size : 32
 * learning rate : 0.001
@@ -214,11 +214,7 @@ We have used following hyper parameters for training the model
 
 ## Q&A
 
-
-
-
-
-### Reason for low mAP
+### Further effort directions to improve mAP
 
 We have obtained current mAP of 0.45. We have emperically found the different scaling factors for different feature maps.
 We are of the view that the results can be improved by considering one more feature map from the base VGG between 'conv5_3' and 'FC7'.
